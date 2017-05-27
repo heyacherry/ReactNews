@@ -1,0 +1,37 @@
+.logo {
+    align-items: center;
+    display: flex;
+} 
+
+.logo img {
+  width: 48px;
+  height: 48px;
+}
+
+.logo span{
+  font-size: 24px;
+  padding-left: 5px;
+}
+
+.login, .logout{
+   float: right !important
+}
+
+.login-form , .login-modal {
+  max-width: 350px;
+}
+
+.login-form .login-form-forgot {
+  float: right;
+}
+
+.login-form .login-form-button {
+  width: 100%;
+}
+
+
+.footer {
+  text-align: center;
+}
+
+
