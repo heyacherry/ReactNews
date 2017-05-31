@@ -1,7 +1,8 @@
 import React from 'react';
-import { Row, Col, Menu, Icon, Button, Form, Input, Checkbox, Modal } from 'antd';
+import { Row, Col, Menu, Icon, Button, Form, Input, Checkbox, Modal, Tabs } from 'antd';
 
 const FormItem = Form.Item;
+const TabPane = Tabs.TabPane;
 
 class MobileHeader extends React.Component {
    constructor(props) {
@@ -56,9 +57,9 @@ class MobileHeader extends React.Component {
              <span>ReactNews</span>
              {userStatus}
         </header>
-              <Modal title="Login" visible={this.state.modalVisible} onOk={this.handleOk.bind(this)}
+        <Modal title="Login" visible={this.state.modalVisible} onOk={this.handleOk.bind(this)}
               onCancel={this.handleCancel.bind(this)}  okText="OK" cancelText="Exit" id="mobile-login-modal">
-              <Form onSubmit={this.handleSubmit.bind(this)} id="mobile-login-form">
+             <Form onSubmit={this.handleSubmit.bind(this)} id="mobile-login-form">
                 <FormItem>
                   { getFieldDecorator('userName', {
                     rules: [
@@ -88,7 +89,7 @@ class MobileHeader extends React.Component {
                       placeholder="Password"/>
                   )}
                 </FormItem>
-                 <FormItem>
+                <FormItem>
                    {getFieldDecorator('remember', { valuePropName: 'checked', initialValue: true,
                     })( <Checkbox>Remember me</Checkbox> )}
                    <a id="mobile-login-form-forgot" href="">Forgot password</a>
@@ -96,7 +97,7 @@ class MobileHeader extends React.Component {
                     Log in
                    </Button>
                     Or <a href="">register now!</a>
-                   </FormItem>
+                  </FormItem>
               </Form>
             </Modal>
         </div>

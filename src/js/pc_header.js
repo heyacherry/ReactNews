@@ -55,7 +55,7 @@ class PCHeader extends React.Component {
 					 < Button type = "dashed" icon = "logout" > 退出 </Button>
 				 </Menu.Item >: 
 				 <Menu.Item key="login" class="login">
-        <Icon type="user"/>登陆
+        <Icon type="user"/>Login
       </Menu.Item>
 
     return (
@@ -71,34 +71,28 @@ class PCHeader extends React.Component {
           <Col span={16}>
             <Menu mode="horizontal" selectedKeys={[this.state.current]} onClick={this.handleClick.bind(this)}>
               <Menu.Item key="top">
-                <Icon type="appstore"/>头条
+                <Icon type="appstore"/><span class="nav-title">Top</span>
               </Menu.Item>
-              <Menu.Item key="shehui">
-                <Icon type="appstore"/>社会
+              <Menu.Item key="abcNews">
+                <Icon type="appstore"/><span class="nav-title">ABC News</span>
               </Menu.Item>
-              <Menu.Item key="guonei">
-                <Icon type="appstore"/>国内
+              <Menu.Item key="bbcNews">
+                <Icon type="appstore"/><span class="nav-title">BBC News</span>
               </Menu.Item>
-              <Menu.Item key="guoji">
-                <Icon type="appstore"/>国际
+              <Menu.Item key="googleNews">
+                <Icon type="appstore"/><span class="nav-title">Google News</span>
               </Menu.Item>
-              <Menu.Item key="yule">
-                <Icon type="appstore"/>娱乐
+              <Menu.Item key="hackerNews">
+                <Icon type="appstore"/><span class="nav-title">Hacker News</span>
               </Menu.Item>
-              <Menu.Item key="tiyu">
-                <Icon type="appstore"/>体育
-              </Menu.Item>
-              <Menu.Item key="keji">
-                <Icon type="appstore"/>科技
-              </Menu.Item>
-              <Menu.Item key="shishang">
-                <Icon type="appstore"/>时尚
+              <Menu.Item key="entertainment">
+                <Icon type="appstore"/><span class="nav-title">Entertainment</span>
               </Menu.Item>
               {userStatus}
             </Menu>
             <Modal title="Login" visible={this.state.modalVisible} onOk={this.handleOk.bind(this)}
-              onCancel={this.handleCancel.bind(this)}  okText="OK" cancelText="Exit" className="login-modal">
-              <Form onSubmit={this.handleSubmit.bind(this)} className="login-form">
+              onCancel={this.handleCancel.bind(this)}  okText="OK" cancelText="Exit" class='login-modal'>
+              <Form onSubmit={this.handleSubmit.bind(this)} class='login-form'>
                 <FormItem>
                   { getFieldDecorator('userName', {
                     rules: [
@@ -131,8 +125,8 @@ class PCHeader extends React.Component {
                  <FormItem>
                    {getFieldDecorator('remember', { valuePropName: 'checked', initialValue: true,
                     })( <Checkbox>Remember me</Checkbox> )}
-                   <a className="login-form-forgot" href="">Forgot password</a>
-                   <Button type="primary" htmlType="submit" className="login-form-button">
+                   <a class='login-form-forgot' href="">Forgot password</a>
+                   <Button type="primary" htmlType="submit" class='login-form-button'>
                     Log in
                    </Button>
                     Or <a href="">register now!</a>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col, Tabs } from 'antd';
 
 export default class MOBFooter extends React.Component{
        render() {
