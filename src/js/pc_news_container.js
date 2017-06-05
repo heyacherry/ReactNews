@@ -44,7 +44,7 @@ export default class PCNewsContainer extends React.Component{
                </Tabs>
             </div>
             <div>
-               <PCNewsImgBlock source='entertainment-weekly' width="100%" cartTitle="Entertainment-weekly" sort='top' imageWidth="180px" count={10}></PCNewsImgBlock>
+               <PCNewsImgBlock source='entertainment-weekly' width="100%" cartTitle="Entertainment-weekly" sort='top' imageWidth="3.5rem" count={10}></PCNewsImgBlock>
             </div>
           </Col>
           </Row>

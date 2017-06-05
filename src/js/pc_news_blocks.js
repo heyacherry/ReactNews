@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs, Card } from 'antd';
+import { Tabs, Card, Spin, Alert } from 'antd';
 
 export default class PCNewsBlock extends React.Component{
     constructor(props){

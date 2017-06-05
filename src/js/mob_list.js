@@ -22,7 +22,7 @@ export default class MobileList extends React.Component{
           const { news } = this.state; //es2015 feature
           const newsList = news.length ?
                 news.map((article,index) => (
-                   <section key={index}>
+                   <section key={index} id="mobileNewsContent">
                     <div id="mobileNewsListImg">
                         <img src={article.urlToImage} />
                     </div>
