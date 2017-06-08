@@ -62,7 +62,7 @@ html{
 
 #mobileNewsListInfo{
   overflow: auto;
-  padding-left: 2px;
+  padding: 0 0.1rem;
 }
 
 #mobileNewsListInfo h3{
@@ -75,6 +75,7 @@ html{
 
 #mobileNewsListInfo i{
   float: right;
+  margin-right: 1em;
 }
 
 

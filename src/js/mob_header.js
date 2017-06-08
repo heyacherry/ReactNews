@@ -45,10 +45,8 @@ class MobileHeader extends React.Component {
 
 	render() {
     const { getFieldDecorator } = this.props.form;
-    const userStatus = this.state.hasLogined ? //If login, show user center and Logout Button 
-           
+    const userStatus = this.state.hasLogined ? //If login, show user center and Logout Button          
 				   <Icon type="setting"/> : <Icon type="user" onClick={this.handleLogin.bind(this)} />
-					//  <Button type = "dashed" icon = "logout" > 退出 </Button> : 
         
 		return (
         <div id="mobileheader">
@@ -57,8 +55,10 @@ class MobileHeader extends React.Component {
              <span>ReactNews</span>
              {userStatus}
         </header>
-        <Modal title="Login" visible={this.state.modalVisible} onOk={this.handleOk.bind(this)}
+        <Modal visible={this.state.modalVisible} onOk={this.handleOk.bind(this)}
               onCancel={this.handleCancel.bind(this)}  okText="OK" cancelText="Exit" id="mobile-login-modal">
+             <Tabs defaultActiveKey="1">
+             <TabPane tab="Login" key="1">
              <Form onSubmit={this.handleSubmit.bind(this)} id="mobile-login-form">
                 <FormItem>
                   { getFieldDecorator('userName', {
@@ -96,9 +96,80 @@ class MobileHeader extends React.Component {
                    <Button type="primary" htmlType="submit" id="mobile-login-form-button">
                     Log in
                    </Button>
-                    Or <a href="">register now!</a>
                   </FormItem>
               </Form>
+              </TabPane>
+
+              <TabPane tab="Register" key="2">
+                <Form>
+                <FormItem>
+                  { getFieldDecorator('userName', {
+                    rules: [
+                      {
+                        required: true,
+                        message: 'Please input your username!'
+                      }
+                    ]
+                  })(
+                    <Input
+                      prefix={< Icon type = "user"/>}
+                      placeholder="Username"/>
+                  )}
+                </FormItem>
+                 <FormItem>
+                  { getFieldDecorator('email', {
+                    rules: [
+                      {
+                        required: true,
+                        message: 'Please input your Email!'
+                      }
+                    ]
+                  })(
+                    <Input
+                      prefix={< Icon type = "mail"/>}
+                      placeholder="Email"/>
+                  )}
+                </FormItem>
+                
+                 <FormItem>
+                  { getFieldDecorator('password', {
+                    rules: [
+                      {
+                        required: true,
+                        message: 'Please confirm your password!'
+                      }
+                    ]
+                  })(
+                     <Input
+                      prefix={< Icon type = "lock"/>}
+                      type="password"
+                      placeholder="Password"/>
+                  )}
+                </FormItem>
+
+                 <FormItem>
+                  { getFieldDecorator('password', {
+                    rules: [
+                      {
+                        required: true,
+                        message: 'Please confirm your password!'
+                      }
+                    ]
+                  })(
+                     <Input
+                      prefix={< Icon type = "lock"/>}
+                      type="password"
+                      placeholder="Password"/>
+                  )}
+                </FormItem>
+                <FormItem>
+                   <Button type="primary" id="mobile-login-form-button">
+                    Register
+                   </Button>
+                  </FormItem>
+              </Form>
+              </TabPane>
+              </Tabs>
             </Modal>
         </div>
 		)

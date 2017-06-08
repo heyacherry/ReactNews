@@ -1,7 +1,8 @@
 import React from 'react';
-import { Row, Col, Menu, Icon, Button, Form, Input, Checkbox, Modal } from 'antd';
+import { Row, Col, Menu, Icon, Button, Form, Input, Checkbox, Modal, Tabs } from 'antd';
 
 const FormItem = Form.Item;
+const TabPane = Tabs.TabPane;
 
 class PCHeader extends React.Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class PCHeader extends React.Component {
     const userStatus = this.state.hasLogined ? //If login, show user center and Logout Button 
 		     < Menu.Item key = "logout" class="logout"> 
 				   <span><Icon type="user"/> {this.state.userName}</span> 
-					 < Button type = "dashed" icon = "logout" > 退出 </Button>
+					 < Button type = "dashed" icon = "logout" > SignOut </Button>
 				 </Menu.Item >: 
 				 <Menu.Item key="login" class="login">
         <Icon type="user"/>Login
@@ -92,8 +93,10 @@ class PCHeader extends React.Component {
             </Menu>
             <Modal title="Login" visible={this.state.modalVisible} onOk={this.handleOk.bind(this)}
               onCancel={this.handleCancel.bind(this)}  okText="OK" cancelText="Exit" class='login-modal'>
-              <Form onSubmit={this.handleSubmit.bind(this)} class='login-form'>
-                <FormItem>
+              <Tabs defaultActiveKey="1">
+             <TabPane tab="Login" key="1">
+             <Form onSubmit={this.handleSubmit.bind(this)} id="mobile-login-form">
+               <FormItem>
                   { getFieldDecorator('userName', {
                     rules: [
                       {
@@ -122,16 +125,87 @@ class PCHeader extends React.Component {
                       placeholder="Password"/>
                   )}
                 </FormItem>
-                 <FormItem>
+                <FormItem>
                    {getFieldDecorator('remember', { valuePropName: 'checked', initialValue: true,
                     })( <Checkbox>Remember me</Checkbox> )}
-                   <a class='login-form-forgot' href="">Forgot password</a>
-                   <Button type="primary" htmlType="submit" class='login-form-button'>
+                   <a id="mobile-login-form-forgot" href="">Forgot password</a>
+                   <Button type="primary" htmlType="submit" id="mobile-login-form-button">
                     Log in
                    </Button>
-                    Or <a href="">register now!</a>
-                   </FormItem>
+                  </FormItem>
               </Form>
+              </TabPane>
+
+              <TabPane tab="Register" key="2">
+                <Form>
+                <FormItem>
+                  { getFieldDecorator('userName', {
+                    rules: [
+                      {
+                        required: true,
+                        message: 'Please input your username!'
+                      }
+                    ]
+                  })(
+                    <Input
+                      prefix={< Icon type = "user"/>}
+                      placeholder="Username"/>
+                  )}
+                </FormItem>
+                 <FormItem>
+                  { getFieldDecorator('email', {
+                    rules: [
+                      {
+                        required: true,
+                        message: 'Please input your Email!'
+                      }
+                    ]
+                  })(
+                    <Input
+                      prefix={< Icon type = "mail"/>}
+                      placeholder="Email"/>
+                  )}
+                </FormItem>
+                
+                 <FormItem>
+                  { getFieldDecorator('password', {
+                    rules: [
+                      {
+                        required: true,
+                        message: 'Please confirm your password!'
+                      }
+                    ]
+                  })(
+                     <Input
+                      prefix={< Icon type = "lock"/>}
+                      type="password"
+                      placeholder="Password"/>
+                  )}
+                </FormItem>
+
+                 <FormItem>
+                  { getFieldDecorator('password', {
+                    rules: [
+                      {
+                        required: true,
+                        message: 'Please confirm your password!'
+                      }
+                    ]
+                  })(
+                     <Input
+                      prefix={< Icon type = "lock"/>}
+                      type="password"
+                      placeholder="Password"/>
+                  )}
+                </FormItem>
+                <FormItem>
+                   <Button type="primary" id="mobile-login-form-button">
+                    Register
+                   </Button>
+                  </FormItem>
+              </Form>
+              </TabPane>
+              </Tabs>
             </Modal>
           </Col>
           {/*<Col span={2}></Col>*/}
