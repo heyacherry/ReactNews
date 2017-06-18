@@ -5,7 +5,7 @@
 <br>
 
 # demo
-<img src="./src/img/page-demo.jpg" alt="ReactNews-demo" width="600px" height="auto">
+<img src="./src/img/page-demo.jpg" alt="ReactNews-demo" width="800px" height="auto">
 <br>
 
 # todo item
