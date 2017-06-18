@@ -1,0 +1,37 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'S:\\Nodejs\\nodejs\\node.exe',
+1 verbose cli   'S:\\Nodejs\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'dev' ]
+2 info using npm@3.10.10
+3 info using node@v6.9.4
+4 verbose run-script [ 'predev', 'dev', 'postdev' ]
+5 info lifecycle react-news@1.0.0~predev: react-news@1.0.0
+6 silly lifecycle react-news@1.0.0~predev: no script for predev, continuing
+7 info lifecycle react-news@1.0.0~dev: react-news@1.0.0
+8 verbose lifecycle react-news@1.0.0~dev: unsafe-perm in lifecycle true
+9 verbose lifecycle react-news@1.0.0~dev: PATH: S:\Nodejs\nodejs\node_modules\npm\bin\node-gyp-bin;F:\Code\FE-Project\Work\React-demos\React-demo\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;S:\MySQL\bin;S:\Heroku\Heroku\bin;C:\Program Files (x86)\git\cmd;S:\Postgresql\bin;C:\Program Files\Calibre2\;C:\Program Files (x86)\Skype\Phone\;S:\Nodejs\nodejs\;S:\Git-msmygit\cmd;S:\jekyII\Ruby24-x64\bin;C:\Program Files\Java\jdk1.8.0_101\bin;S:\Eclipse\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;C:\Users\CherryLiang\AppData\Local\Microsoft\WindowsApps;C:\Users\CherryLiang\AppData\Roaming\npm;S:\VSCode\Microsoft VS Code\bin
+10 verbose lifecycle react-news@1.0.0~dev: CWD: F:\Code\FE-Project\Work\React-demos\React-demo
+11 silly lifecycle react-news@1.0.0~dev: Args: [ '/d /s /c',
+11 silly lifecycle   'webpack-dev-server --devtool eval --progress --colors --hot --content-base' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at exports._errnoException (util.js:1022:11)
+12 verbose stack     at process.kill (internal/process.js:172:13)
+12 verbose stack     at process.listener (S:\Nodejs\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+12 verbose stack     at emitNone (events.js:91:20)
+12 verbose stack     at process.emit (events.js:185:7)
+12 verbose stack     at processEmit (S:\Nodejs\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at processEmit (S:\Nodejs\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at Signal.wrap.onsignal (internal/process.js:199:44)
+13 verbose cwd F:\Code\FE-Project\Work\React-demos\React-demo
+14 error Windows_NT 10.0.14393
+15 error argv "S:\\Nodejs\\nodejs\\node.exe" "S:\\Nodejs\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "dev"
+16 error node v6.9.4
+17 error npm  v3.10.10
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]
