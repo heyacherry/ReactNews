@@ -5,7 +5,12 @@
 <br>
 
 # demo
-<img src="./src/img/page-demo.jpg" alt="ReactNews-demo" width="800px" height="auto">
+<img src="./src/img/page-demo.jpg" alt="ReactNews-demo" width="600px" height="auto">
+<br>
+
+# todo item
+- Optimize register feature
+- Supplement Express / mysql
 <br>
 
 ## Build Setup
@@ -22,10 +27,6 @@ npm run build
 ```
 <br>
 
-#todo item
-- Optimize register feature
-- Express / mysql
-<br>
 
-~(≧▽≦)/~  如果有那么一丁点儿喜欢 请随手🌟~(≧▽≦)/~啦啦啦 <br>
-~(≧▽≦)/~  Encourage me a start🌟 if you like it~(≧▽≦)/
+ヾ(o◕∀◕)ﾉヾ  如果有那么一丁点儿喜欢 请随手🌟ヾ(o◕∀◕)ﾉヾ啦啦啦 <br>
+ヾ(o◕∀◕)ﾉヾ  Encourage me a start🌟 if you like itヾ(o◕∀◕)ﾉヾ
